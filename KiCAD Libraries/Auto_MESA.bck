@@ -1,0 +1,12 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 7i77
+D Mesa 7i77 Breakout Board
+K fpga, linux
+$ENDCMP
+#
+$CMP SAFETY_SWITCH_LOCKING
+K IDEC, SOLENOID, SPRING RETURN LOCKING INTERLOCK
+$ENDCMP
+#
+#End Doc Library

@@ -1,0 +1,218 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:Auto_Anilam
+LIBS:Auto_Device
+LIBS:Auto_MESA
+LIBS:Auto_power
+LIBS:Auto_Safety_Cmpnts
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 5
+Title "ANILAM TO LINUXCNC CONVERSION"
+Date "Tuesday, June 16, 2015"
+Rev "1"
+Comp ""
+Comment1 "SAFETY RELAY LAYOUT"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L +24V #PWR4
+U 1 1 5580E333
+P 1150 1050
+F 0 "#PWR4" H 1150 900 50  0001 C CNN
+F 1 "+24V" H 1150 1190 50  0000 C CNN
+F 2 "" H 1150 1050 60  0000 C CNN
+F 3 "" H 1150 1050 60  0000 C CNN
+	1    1150 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L SAFETY_RELAY R2
+U 1 1 5580E347
+P 3950 2450
+F 0 "R2" H 3950 2000 60  0000 C CNN
+F 1 "SAFETY_RELAY" H 3950 2900 60  0000 C CNN
+F 2 "" H 3950 2450 60  0000 C CNN
+F 3 "" H 3950 2450 60  0000 C CNN
+	1    3950 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L ESTOP S1
+U 1 1 5580E3F7
+P 2200 2950
+F 0 "S1" H 2200 2745 60  0000 C CNN
+F 1 "ESTOP" H 2200 3185 60  0000 C CNN
+F 2 "" H 2195 2980 60  0000 C CNN
+F 3 "" H 2195 2980 60  0000 C CNN
+	1    2200 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L PB_SWTICH S2
+U 1 1 5580E4B1
+P 5700 2300
+F 0 "S2" H 5700 2200 60  0000 C CNN
+F 1 "PB_SWTICH" H 5700 2450 60  0001 C CNN
+F 2 "" H 5700 2300 60  0000 C CNN
+F 3 "" H 5700 2300 60  0000 C CNN
+	1    5700 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR5
+U 1 1 5580E504
+P 7050 4900
+F 0 "#PWR5" H 7050 4650 50  0001 C CNN
+F 1 "GND" H 7050 4750 50  0000 C CNN
+F 2 "" H 7050 4900 60  0000 C CNN
+F 3 "" H 7050 4900 60  0000 C CNN
+	1    7050 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L SPST SW4
+U 1 1 5580E528
+P 2400 4450
+F 0 "SW4" H 2400 4550 50  0000 C CNN
+F 1 "SPST" H 2400 4350 50  0000 C CNN
+F 2 "" H 2400 4450 60  0000 C CNN
+F 3 "" H 2400 4450 60  0000 C CNN
+	1    2400 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 1050 1150 4450
+Wire Wire Line
+	1150 2100 3500 2100
+Wire Wire Line
+	3500 2800 2700 2800
+Wire Wire Line
+	2700 2800 2700 2100
+Connection ~ 2700 2100
+Wire Wire Line
+	1550 2300 3500 2300
+Wire Wire Line
+	3250 2300 3250 2400
+Wire Wire Line
+	3250 2400 3500 2400
+Wire Wire Line
+	1550 2300 1550 2950
+Wire Wire Line
+	1550 2950 1900 2950
+Connection ~ 3250 2300
+Wire Wire Line
+	3500 2200 1400 2200
+Wire Wire Line
+	1400 2200 1400 3050
+Wire Wire Line
+	1400 3050 1900 3050
+Wire Wire Line
+	2500 3050 5350 3050
+Wire Wire Line
+	5350 3050 5350 2200
+Wire Wire Line
+	5350 2200 4400 2200
+Wire Wire Line
+	2500 2950 5250 2950
+Wire Wire Line
+	5250 2950 5250 2300
+Wire Wire Line
+	4400 2300 5400 2300
+Wire Wire Line
+	4400 2800 5850 2800
+Wire Wire Line
+	6450 2800 7050 2800
+Wire Wire Line
+	7050 2100 7050 4900
+Connection ~ 5250 2300
+Wire Wire Line
+	4400 2400 5500 2400
+Wire Wire Line
+	5500 2400 5500 2500
+Wire Wire Line
+	5500 2500 6200 2500
+Wire Wire Line
+	6200 2500 6200 2300
+Wire Wire Line
+	6200 2300 6000 2300
+Wire Wire Line
+	1150 4450 1900 4450
+Connection ~ 1150 2100
+Wire Wire Line
+	2900 4450 3350 4450
+Wire Wire Line
+	3950 4450 7050 4450
+Connection ~ 7050 4450
+$Comp
+L PILOT_Light_R PL1
+U 1 1 5580EB63
+P 3650 4450
+F 0 "PL1" H 3645 4265 60  0000 C CNN
+F 1 "PILOT_Light_R" H 3650 4710 60  0001 C CNN
+F 2 "" H 3650 4450 60  0000 C CNN
+F 3 "" H 3650 4450 60  0000 C CNN
+	1    3650 4450
+	1    0    0    -1  
+$EndComp
+Text Notes 2250 4300 0    60   ~ 0
+ESTOP NO \nCONTACT
+$Comp
+L PILOT_Light_B PL2
+U 1 1 5580EC10
+P 6150 2800
+F 0 "PL2" H 6145 2615 60  0000 C CNN
+F 1 "PILOT_Light_B" H 6150 3060 60  0001 C CNN
+F 2 "" H 6150 2800 60  0000 C CNN
+F 3 "" H 6150 2800 60  0000 C CNN
+	1    6150 2800
+	1    0    0    -1  
+$EndComp
+Text Notes 5550 2200 0    60   ~ 0
+RESET
+Text Notes 5500 2650 0    60   ~ 0
+RESET
+Wire Wire Line
+	4400 2100 7050 2100
+Connection ~ 7050 2800
+Text GLabel 3400 2700 0    60   Input ~ 0
+MSR127TP_23
+Wire Wire Line
+	3400 2700 3500 2700
+Text GLabel 4500 2700 2    60   Input ~ 0
+MSR127TP_24
+Wire Wire Line
+	4500 2700 4400 2700
+$EndSCHEMATC

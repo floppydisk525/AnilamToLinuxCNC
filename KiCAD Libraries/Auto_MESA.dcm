@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 7i77
+D Mesa 7i77 Breakout Board
+K fpga, linux
+$ENDCMP
+#
+#End Doc Library
